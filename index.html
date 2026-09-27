@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta
+      name="description"
+      content="Sol Naciente Soluciones Digitales — Showrooms Digitales Interactivos para concesionarias, importadoras y vendedores de alta gama en Asunción."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Sol Naciente Soluciones Digitales" />
+
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PY" />
+    <meta property="og:site_name" content="Sol Naciente Soluciones Digitales" />
+    <meta property="og:title" content="Showrooms Digitales Interactivos — Sol Naciente" />
+    <meta
+      property="og:description"
+      content="Convertimos el interés en una experiencia comercial más clara y accionable. Fichas web por vehículo para concesionarias e importadoras en Asunción."
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Showrooms Digitales Interactivos — Sol Naciente" />
+    <meta
+      name="twitter:description"
+      content="Fichas web por vehículo con galería, especificaciones y botón de cotización directo a WhatsApp."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter+Tight:wght@400;500;600;700;800&family=Montserrat:wght@500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FFD60A'/%3E%3Ccircle cx='50' cy='50' r='43' fill='none' stroke='%230a0a0b' stroke-width='3'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='34' fill='%230a0a0b'%3ESOL%3C/text%3E%3C/svg%3E"
+    />
+    <title>Sol Naciente — Showrooms Digitales Interactivos</title>
+    <style>
+      html { background: #0a0a0b; color-scheme: dark; }
+    </style>
+    <!--
+      Fallback: if this file is opened WITHOUT compiling (double-click on the
+      source index.html, or GitHub Pages serving the repo root), the app never
+      boots. In that case, redirect to the compiled version in /docs.
+      In the compiled version the flag already exists and this does nothing.
+    -->
+    <script>
+      (function () {
+        function showHelp() {
+          var box = document.createElement("div");
+          box.setAttribute("role", "alert");
+          box.style.cssText =
+            "max-width:34rem;margin:15vh auto;padding:28px;border:1px solid #26272b;border-radius:16px;background:#141518;color:#fff;font:16px/1.5 system-ui,sans-serif";
+          box.innerHTML =
+            '<p style="margin:0 0 8px;color:#ffd60a;font-weight:700;letter-spacing:.12em;font-size:13px">SOL NACIENTE</p>' +
+            '<h1 style="margin:0 0 12px;font-size:22px">Este es el archivo de código fuente</h1>' +
+            '<p style="margin:0;color:#b8b9be">Abrí <strong style="color:#fff">docs/index.html</strong> para ver el sitio, ' +
+            'o ejecutá <code style="color:#ffd60a">npm run dev</code> para editarlo.</p>';
+          document.body.appendChild(box);
+        }
+
+        function fallback() {
+          if (window.__SN_BOOTED__) return;
+          if (/\/docs\/(index\.html)?$/.test(location.pathname)) return showHelp();
+
+          var target = new URL("docs/index.html", location.href).href;
+          if (location.protocol === "file:") return location.replace(target);
+
+          fetch(target, { method: "HEAD", cache: "no-store" })
+            .then(function (r) {
+              r.ok ? location.replace(target) : showHelp();
+            })
+            .catch(showHelp);
+        }
+
+        window.addEventListener("load", function () {
+          setTimeout(fallback, 150);
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
